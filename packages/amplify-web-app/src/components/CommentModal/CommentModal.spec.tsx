@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from '../../../utils/test/helpers'
+import { renderWithTheme } from '@pauloluan/shared'
 
 import { CommentModal } from '.'
 // import theme from '../Theme'
@@ -7,7 +7,12 @@ import { CommentModal } from '.'
 describe('<CommentModal />', () => {
   it('should render the CommentModal component and find it by Test Id', () => {
     renderWithTheme(
-      <CommentModal commentModalIsOpen={true} testId="CommentModal" />
+      <CommentModal
+        postId="123"
+        commentModalIsOpen={true}
+        handleCloseModal={() => null}
+        testId="CommentModal"
+      />
     )
     expect(screen.getByTestId(/CommentModal/i)).toBeDefined()
   })
