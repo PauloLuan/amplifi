@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom'
+import { Home } from './pages/Home'
 import { PostPage } from './pages/Post'
-import { Posts } from './pages/Posts'
 
 export function App() {
   return (
     <Routes>
-      <Route path="/" element={<Posts />} />
+      <Route path="/" element={<Home />} />
       <Route path="/Posts/*" element={<PostPage />} />
     </Routes>
   )
