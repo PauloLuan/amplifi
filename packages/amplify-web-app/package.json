@@ -1,0 +1,13 @@
+{
+  "name": "@pauloluan/amplify",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@pauloluan/shared": "*"
+  }
+}
