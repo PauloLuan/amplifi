@@ -15,6 +15,6 @@ export const Title = styled.h1`
 `
 
 export const Content = styled.p`
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.8rem;
 `

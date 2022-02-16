@@ -20,7 +20,7 @@ export const CustomCommentModalStyles = createGlobalStyle`
     .react-modal-content {
       width: 100%;
       max-width: 576px;
-      background: '#F0F2F5';
+      background-color: #f0f2f5;
       padding: 3rem;
       position: relative;
       border-radius: 0.5rem;
@@ -31,7 +31,7 @@ export const CustomCommentModalStyles = createGlobalStyle`
 export const Form = styled.form`
   ${({ theme }) => css`
     h2 {
-      color: '#363F5F';
+      color: #363F5F;
       font-size: 2rem;
       margin-bottom: 2rem;
     }
@@ -43,15 +43,15 @@ export const Form = styled.form`
       height: 4rem;
       padding: 1rem;
 
-      border: 1px solid '#d7d7d7';
+      border: 1px solid #d7d7d7;
       border-radius: 0.5rem;
-      background: '#e7e9ee'
+      background: #e7e9ee
 
       font-weight: 600;
       font-size: 1rem;
 
       &::placeholder {
-        color: '#363F5F';
+        color: #363F5F;
       }
 
       & + input {
@@ -63,8 +63,8 @@ export const Form = styled.form`
       width: 100%;
       height: 3rem;
       margin-top: 1.5rem;
-      color: '#FFFFFF';
-      background: '#33CC95';
+      color: #FFFFFF;
+      background: #33CC95;
       border: 0;
       border-radius: 0.5rem;
       font-size: 1.5rem;
