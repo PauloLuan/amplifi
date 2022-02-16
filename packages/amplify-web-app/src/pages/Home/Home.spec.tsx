@@ -10,6 +10,10 @@ describe('<Home />', () => {
   const Wrapper = ({ children }: any) => (
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   )
+  /**
+   * @IMPORTANT: This test should be improved in order to nock
+   * external requests in order to avoid real network calls
+   */
   it('should render the Home component and find it by Test Id', () => {
     renderWithTheme(
       <Wrapper>
