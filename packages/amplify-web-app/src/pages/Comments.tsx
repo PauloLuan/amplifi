@@ -1,9 +1,9 @@
 import { api } from '../services/axios'
 import { useQuery } from 'react-query'
 import { Link } from 'react-router-dom'
-import { CommentType } from '@pauloluan/shared'
+import { Comments, CommentType } from '@pauloluan/shared'
 
-export function Comments({ postId }: { postId: string }) {
+export function CommentsSection({ postId }: { postId: string }) {
   const { data, isFetching } = useQuery<CommentType[]>(
     'comments',
     async () => {
@@ -19,15 +19,8 @@ export function Comments({ postId }: { postId: string }) {
   return (
     <ul>
       {isFetching && <p>Carregando...</p>}
-      {data?.map((comment) => {
-        return (
-          <li key={comment.id}>
-            <Link to={`comments/${comment.id}`}>{comment.id}</Link>
-            <h1>{comment.email}</h1>
-            <p>{comment.body}</p>
-          </li>
-        )
-      })}
+
+      <Comments comments={data} />
     </ul>
   )
 }

@@ -1,6 +1,6 @@
 import { useQueryClient } from 'react-query'
 import { useParams } from 'react-router-dom'
-import { Comments } from './Comments'
+import { CommentsSection } from './Comments'
 import { PostType } from '@pauloluan/shared'
 
 export function PostPage() {
@@ -24,7 +24,7 @@ export function PostPage() {
     <div>
       <h1>{post && post.title}</h1>
       <p>{post && post.body}</p>
-      <Comments postId={postId} />
+      <CommentsSection postId={postId} />
     </div>
   )
 }
