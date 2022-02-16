@@ -1,6 +1,7 @@
-import React, { SyntheticEvent, useState } from 'react'
-import Modal from 'react-modal'
 import { CommentType } from '@pauloluan/shared/src/interfaces'
+import { SyntheticEvent, useState } from 'react'
+import Modal from 'react-modal'
+import { useComments } from '../../providers'
 // import { useComments } from '../../providers'
 import * as S from './CommentModal.styles'
 
@@ -26,7 +27,7 @@ export const CommentModal = ({
   const [email, setEmail] = useState('')
   const [body, setBody] = useState('')
 
-  // const { addComment } = useComments()
+  const { addComment } = useComments()
 
   const _clearState = () => {
     setName('')
@@ -43,8 +44,7 @@ export const CommentModal = ({
       body
     }
 
-    // addComment(data)
-    console.log(data)
+    addComment(data)
     _clearState()
     handleCloseModal()
   }

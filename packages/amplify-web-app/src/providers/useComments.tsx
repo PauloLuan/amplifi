@@ -30,8 +30,8 @@ export const CommentsProvider = ({ children }: CommentsProviderProps) => {
   const addComment = async (data: CommentFormType) => {
     const endpoint = `posts/${data.postId}/comments`
     const response = await api.post(endpoint, data)
-    const { comment } = response.data
-    setComments([...comments, comment])
+    const comment = response.data
+    setComments([comment, ...comments])
   }
 
   return (
