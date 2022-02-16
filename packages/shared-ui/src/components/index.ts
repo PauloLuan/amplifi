@@ -1,2 +1,3 @@
 export * from './Header'
-export * from './ListItem'
+export * from './Posts'
+export * from './Comments'
