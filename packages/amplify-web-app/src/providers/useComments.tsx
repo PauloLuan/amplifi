@@ -24,7 +24,7 @@ export const CommentsProvider = ({ children }: CommentsProviderProps) => {
   const fetchComments = async (postId: string) => {
     const endpoint = `posts/${postId}/comments`
     const remoteComments = await api.get(endpoint)
-    setComments(remoteComments.data.comments)
+    setComments(remoteComments.data)
   }
 
   const addComment = async (data: CommentFormType) => {

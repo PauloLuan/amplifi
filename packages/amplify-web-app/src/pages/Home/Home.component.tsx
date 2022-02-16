@@ -1,5 +1,6 @@
 import { Posts, PostType } from '@pauloluan/shared'
 import { useQuery } from 'react-query'
+import { CommentsProvider } from '../../providers'
 import { api } from '../../services/axios'
 import * as S from './Home.styles'
 

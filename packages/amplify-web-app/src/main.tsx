@@ -5,6 +5,7 @@ import { QueryClientProvider } from 'react-query'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { App } from './App'
+import { CommentsProvider } from './providers'
 import { queryClient } from './services/queryClient'
 import { GlobalStyles } from './styles/global'
 import { CSSReset } from './styles/resetCSS'
@@ -14,7 +15,9 @@ ReactDOM.render(
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider theme={theme}>
-          <App />
+          <CommentsProvider>
+            <App />
+          </CommentsProvider>
           <CSSReset />
           <GlobalStyles />
         </ThemeProvider>
