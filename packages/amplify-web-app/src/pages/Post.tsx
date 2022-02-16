@@ -1,7 +1,7 @@
 import { useQueryClient } from 'react-query'
 import { useParams } from 'react-router-dom'
 import { Comments } from './Comments'
-import { Post } from './interfaces'
+import { PostType } from './interfaces'
 
 export function PostPage() {
   const params = useParams()
@@ -10,7 +10,7 @@ export function PostPage() {
 
   const getCachedPost = (postId: number) => {
     let currentPost
-    const previousPosts = queryClient.getQueryData<Post[]>('posts')
+    const previousPosts = queryClient.getQueryData<PostType[]>('posts')
     if (previousPosts) {
       currentPost = previousPosts.find((post) => post.id === postId)
     }

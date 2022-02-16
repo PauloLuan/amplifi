@@ -1,15 +1,13 @@
-import axios from 'axios'
+import { api } from '../services/axios'
 import { useQuery } from 'react-query'
 import { Link } from 'react-router-dom'
-import { Comment } from './interfaces'
+import { CommentType } from './interfaces'
 
 export function Comments({ postId }: { postId: string }) {
-  const { data, isFetching } = useQuery<Comment[]>(
+  const { data, isFetching } = useQuery<CommentType[]>(
     'comments',
     async () => {
-      const response = await axios.get(
-        `https://jsonplaceholder.typicode.com/posts/${postId}/comments`
-      )
+      const response = await api.get(`posts/${postId}/comments`)
 
       return response.data
     },

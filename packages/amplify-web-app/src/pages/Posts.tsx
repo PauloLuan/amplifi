@@ -1,15 +1,13 @@
-import axios from 'axios'
+import { api } from '../services/axios'
 import { useQuery } from 'react-query'
 import { Link } from 'react-router-dom'
-import { Post } from './interfaces'
+import { PostType } from './interfaces'
 
 export function Posts() {
-  const { data, isFetching } = useQuery<Post[]>(
+  const { data, isFetching } = useQuery<PostType[]>(
     'posts',
     async () => {
-      const response = await axios.get(
-        'https://jsonplaceholder.typicode.com/posts'
-      )
+      const response = await api.get('posts')
 
       return response.data
     },
