@@ -6,6 +6,8 @@ import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { App } from './App'
 import { queryClient } from './services/queryClient'
+import { GlobalStyles } from './styles/global'
+import { CSSReset } from './styles/resetCSS'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,8 +15,8 @@ ReactDOM.render(
       <QueryClientProvider client={queryClient}>
         <ThemeProvider theme={theme}>
           <App />
-          {/* <CSSReset /> */}
-          {/* <GlobalStyles /> */}
+          <CSSReset />
+          <GlobalStyles />
         </ThemeProvider>
       </QueryClientProvider>
     </BrowserRouter>
