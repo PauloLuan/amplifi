@@ -1,7 +1,7 @@
 import { useQueryClient } from 'react-query'
 import { useParams } from 'react-router-dom'
 import { Comments } from './Comments'
-import { PostType } from './interfaces'
+import { PostType } from '../interfaces'
 
 export function PostPage() {
   const params = useParams()
