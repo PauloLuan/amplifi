@@ -34,6 +34,10 @@ export const CSSReset = createGlobalStyle`
       cursor: pointer;
     }
 
+    a:link {
+      text-decoration: none;
+    }
+
     [disabled] {
       opacity: 0.6;
       cursor: not-allowed;
