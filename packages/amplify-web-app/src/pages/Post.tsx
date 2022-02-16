@@ -1,7 +1,7 @@
 import { useQueryClient } from 'react-query'
 import { useParams } from 'react-router-dom'
 import { CommentsSection } from './Comments'
-import { PostType } from '@pauloluan/shared'
+import { Article, PostType } from '@pauloluan/shared'
 
 export function PostPage() {
   const params = useParams()
@@ -21,10 +21,9 @@ export function PostPage() {
   const post = getCachedPost(Number(postId))
 
   return (
-    <div>
-      <h1>{post && post.title}</h1>
-      <p>{post && post.body}</p>
+    <>
+      <Article post={post} />
       <CommentsSection postId={postId} />
-    </div>
+    </>
   )
 }
