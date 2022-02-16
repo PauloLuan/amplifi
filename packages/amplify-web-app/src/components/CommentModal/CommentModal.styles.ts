@@ -64,7 +64,7 @@ export const Form = styled.form`
       height: 3rem;
       margin-top: 1.5rem;
       color: #FFFFFF;
-      background: #33CC95;
+      background: #0099ff;
       border: 0;
       border-radius: 0.5rem;
       font-size: 1.5rem;
