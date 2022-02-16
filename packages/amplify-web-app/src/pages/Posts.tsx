@@ -3,7 +3,7 @@ import { useQuery } from 'react-query'
 import { Link } from 'react-router-dom'
 import { PostType } from '@pauloluan/shared'
 
-export function Posts() {
+export function PostsPage() {
   const { data, isFetching } = useQuery<PostType[]>(
     'posts',
     async () => {

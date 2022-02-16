@@ -1,6 +1,7 @@
 import React from 'react'
 import * as S from './Posts.styles'
 import { PostType } from '../../interfaces'
+import { Link } from 'react-router-dom'
 
 export type PostsProps = {
   testId?: string
@@ -14,14 +15,16 @@ export const Posts = ({ testId = 'posts-id', posts, ...props }: PostsProps) => {
       <S.CardContainer data-testid={testId} {...props}>
         {posts &&
           posts.map((post) => (
-            <S.Card key={post.id}>
-              <img src={`https://picsum.photos/300/200`} alt={post.title} />
+            <Link key={post.id} to={`posts/${post.id}`}>
+              <S.Card key={post.id}>
+                <img src={`https://picsum.photos/300/200`} alt={post.title} />
 
-              <S.CardContent>
-                <strong>{post.title}</strong>
-                <p>{post.body}</p>
-              </S.CardContent>
-            </S.Card>
+                <S.CardContent>
+                  <strong>{post.title}</strong>
+                  <p>{post.body}</p>
+                </S.CardContent>
+              </S.Card>
+            </Link>
           ))}
       </S.CardContainer>
     </S.Container>
