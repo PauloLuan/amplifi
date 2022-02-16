@@ -28,7 +28,7 @@ export const Wrapper = styled.li`
     }
 
     p {
-      font-weight: 100;
+      font-weight: 300;
     }
   `}
 `
