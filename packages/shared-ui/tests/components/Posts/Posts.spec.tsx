@@ -9,6 +9,6 @@ import { posts } from './Posts.data'
 describe('<Posts />', () => {
   it('should render the Posts component', () => {
     renderWithTheme(<Posts posts={posts} />)
-    expect(screen.getByTestId('post-id')).toBeInTheDocument()
+    expect(screen.getByTestId('posts-id')).toBeInTheDocument()
   })
 })
