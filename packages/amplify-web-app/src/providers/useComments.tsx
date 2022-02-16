@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react'
-import { CommentType } from '../interfaces'
+import { CommentType } from '@pauloluan/shared'
 import { api } from '../services/axios'
 
 interface CommentsProviderProps {

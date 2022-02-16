@@ -1,7 +1,7 @@
 import { api } from '../services/axios'
 import { useQuery } from 'react-query'
 import { Link } from 'react-router-dom'
-import { CommentType } from '../interfaces'
+import { CommentType } from '@pauloluan/shared'
 
 export function Comments({ postId }: { postId: string }) {
   const { data, isFetching } = useQuery<CommentType[]>(

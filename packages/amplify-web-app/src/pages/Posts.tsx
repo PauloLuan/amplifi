@@ -1,7 +1,7 @@
 import { api } from '../services/axios'
 import { useQuery } from 'react-query'
 import { Link } from 'react-router-dom'
-import { PostType } from '../interfaces'
+import { PostType } from '@pauloluan/shared'
 
 export function Posts() {
   const { data, isFetching } = useQuery<PostType[]>(
